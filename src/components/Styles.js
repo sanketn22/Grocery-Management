@@ -17,6 +17,19 @@
     highlight: {
       fontWeight: '700',
     },
+
+    signupTI :{
+      justifyContent: 'center',
+      backgroundColor: "white",
+      height : 20,
+      width: 200,
+      color : 'black',
+      fontSize:5,
+      margin: 5,
+      // flex : 2,
+
+    
+    }
   });
 
   export default styles;
