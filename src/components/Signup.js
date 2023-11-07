@@ -1,11 +1,38 @@
 import styles from "./Styles"
-
+import { useState } from "react";
+import { TextInput } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
+
 const myIcon = <Icon name="rocket" size={30} color="#900" />;
 
-const { TextInput, View, Image } = require("react-native")
+const { View, Image } = require("react-native");
+
 
 const Signup = ()=>{
+    const [text, setText] = useState("");
+
+    return (
+        <>
+        <View
+        style={{justifyContent:"center", backgroundColor:"FF8080"}}>
+      <TextInput
+        placeholder="Email"
+        value={text}
+        onChangeText={text => setText(text)}
+        style={styles.signupTI}
+      />
+
+<TextInput
+        placeholder="password"
+        value={text}
+        onChangeText={text => setText(text)}
+        style={styles.signupTI}
+      />
+      </View>
+
+</>
+    );
 
 
 
@@ -14,7 +41,8 @@ return(
     style={{justifyContent:"center", alignItems:"center", backgroundColor:"FF8080"}}>
 
         <Image
-            source={require('D:\Projects\Grocker\src\resuorces\home.png')}/>
+            source={require('../resuorces/home.png')}
+            style={{height:25, width:25}}/>
 
 
         <TextInput style={styles.signupTI}

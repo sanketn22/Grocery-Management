@@ -21,10 +21,10 @@
     signupTI :{
       justifyContent: 'center',
       backgroundColor: "white",
-      height : 20,
-      width: 200,
+      height : 15,
+      // width: 200,
       color : 'black',
-      fontSize:5,
+      fontSize:10,
       margin: 5,
       // flex : 2,
 
