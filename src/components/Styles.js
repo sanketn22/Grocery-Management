@@ -27,7 +27,6 @@
       margin: 10,
       // borderRadius:10,
       borderRadius: 5,
-      input
     }
   });
 
