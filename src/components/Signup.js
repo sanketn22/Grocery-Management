@@ -17,11 +17,12 @@ const Signup = () => {
     return (
         <>
             <View
-            style={{ justifyContent: "center", backgroundColor: "#FFCC70", height: '100%', flexDirection:"column" }}>
-
+            style={{ justifyContent: "center", backgroundColor: "#FFCC70", height: '100%', flexDirection:"column"}}>
+                <View style={{elevation:4, shadowColor:'red', shadowOffset:10}}>
                 <Image
                     source={require('../resuorces/appIcon1.png')}
-                    style={{ height: 200, width: 200, marginTop:-250,alignSelf:"center"}} />
+                    style={{ height: 200, width: 200, marginTop:-100,alignSelf:"center"}} />
+                    </View>
                     
                 <TextInput
                     placeholder="Email"
@@ -37,9 +38,14 @@ const Signup = () => {
                     onChangeText={text => setPass(text)}
                     style={[styles.signupTI, { textColor: "white" }]}
                     secureTextEntry = {true}
+                    
                 />
                 <Text>
-                    Hi there
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Libero nunc consequat interdum varius sit amet mattis vulputate enim. 
+                Pretium lectus quam id leo. 
+                Felis eget nunc lobortis mattis aliquam faucibus purus in. 
+                Est ante in nibh mauris cursus mattis molestie a iaculis.                 
                 </Text>
             </View>
 
