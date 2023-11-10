@@ -25,39 +25,21 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+// import { createStackNavigator } from '@react-navigation/stack';
+// import { NavigationContainer } from '@react-navigation/native';
+
+
 import styles from './src/components/Styles';
 import Home from './src/components/Home';
 import Landing from './src/components/Landing';
+import BottomTabs from './src/components/BottomTabs';
+import MyComponent from './src/components/BottomTabs';
 
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+// const Stack = createStackNavigator();
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -67,12 +49,9 @@ function App(): JSX.Element {
   };
 
   return (
-   
-    <Landing/>
-    
+ 
+  <BottomTabs/>
   );
 }
-
-
 
 export default App;

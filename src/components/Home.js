@@ -1,15 +1,17 @@
 
-import BottomTabs from './BottomTabs';
 
 
 
 // const homeIcon = Icon.
 
+import { Text } from "react-native-paper";
+
 const Home = () => {
 
   return(
     <>
-    <BottomTabs/>
+    <Text>Home screen</Text>
+
     </>
   )
 
