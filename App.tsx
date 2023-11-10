@@ -26,7 +26,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import styles from './src/components/Styles';
-import Signup from './src/components/Signup';
+import Home from './src/components/Home';
+import Landing from './src/components/Landing';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -66,10 +67,9 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <Signup/>
- 
-    </SafeAreaView>
+   
+    <Landing/>
+    
   );
 }
 

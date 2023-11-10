@@ -20,15 +20,13 @@
 
     signupTI :{
       justifyContent: 'center',
-      backgroundColor: "white",
-      height : 15,
-      // width: 200,
-      color : 'black',
+      backgroundColor: "black",
+      height : 45,   
+      // textColor : 'white',
       fontSize:10,
-      margin: 5,
-      // flex : 2,
-
-    
+      margin: 10,
+      // borderRadius:10,
+      borderRadius: 5,
     }
   });
 
