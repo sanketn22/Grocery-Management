@@ -33,7 +33,6 @@ import styles from './src/components/Styles';
 import Home from './src/components/Home';
 import Landing from './src/components/Landing';
 import BottomTabs from './src/components/BottomTabs';
-import MyComponent from './src/components/BottomTabs';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -50,7 +49,8 @@ function App(): JSX.Element {
 
   return (
  
-  <BottomTabs/>
+    // <Landing/>
+    <BottomTabs/>
   );
 }
 

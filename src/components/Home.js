@@ -1,8 +1,5 @@
-
-
-
-
-// const homeIcon = Icon.
+//render 4 cards for different categories of items
+//add to list button
 
 import { Text } from "react-native-paper";
 
