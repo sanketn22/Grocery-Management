@@ -1,7 +1,10 @@
 import * as React from 'react';
-import { BottomNavigation, Icon, Text } from 'react-native-paper';
+import { BottomNavigation, Text } from 'react-native-paper';
 
-const HomeRoute = () => <Text>Hey there</Text>;
+import Home from './Home';
+
+
+const HomeRoute = () => <Home/>;
 
 const MapRoute = () => <Text>Map</Text>;
 

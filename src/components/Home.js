@@ -1,15 +1,14 @@
+//render 4 cards for different categories of items
+//add to list button
 
-import BottomTabs from './BottomTabs';
-
-
-
-// const homeIcon = Icon.
+import { Text } from "react-native-paper";
 
 const Home = () => {
 
   return(
     <>
-    <BottomTabs/>
+    <Text>Home screen</Text>
+
     </>
   )
 
