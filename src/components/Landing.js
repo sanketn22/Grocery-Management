@@ -39,7 +39,7 @@ const Landing = () => {
     return (
         <>
             <View
-                style={{ justifyContent: "center", backgroundColor: "#FFCC70", height: '100%', flexDirection: "column" }}>
+                style={{ justifyContent: "center", backgroundColor: "#800080", height: '100%', flexDirection: "column" }}>
 
                 <Image
                     source={require('../resuorces/appIcon1.png')}
