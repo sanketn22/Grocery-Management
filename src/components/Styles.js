@@ -27,6 +27,26 @@
       margin: 10,
       // borderRadius:10,
       borderRadius: 5,
+    },
+
+    home:{
+      height:'100%', 
+      flexDirection: 'row', 
+      justifyContent:'center', 
+      alignItems:'center',  
+      backgroundColor:'#EEE2DE', 
+      gap: 20,
+    },
+
+    ripple:{
+      height: 225,
+      width :175,
+      marginTop:'15',
+      justifyContent:'center',
+      alignItems:'center',
+      borderRadius : 50,
+      backgroundColor :'#B31312'
+      
     }
   });
 
