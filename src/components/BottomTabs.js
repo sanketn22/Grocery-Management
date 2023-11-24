@@ -2,6 +2,7 @@ import * as React from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
 
 import Home from './Home';
+import styles from './Styles';
 
 
 const HomeRoute = () => <Home/>;
@@ -36,6 +37,7 @@ const BottomTabs = (props)=>{
         navigationState={{ index, routes }}
         onIndexChange={setIndex}
         renderScene={renderScene}
+        barStyle={styles.bottom}
       />
       </>
     );
