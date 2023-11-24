@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Avatar, Button, Card, Text } from 'react-native-paper';
 import { ScrollView} from 'react-native'
-import ItemList from '../ItemList';
+import ItemList from '../components/core-components/ItemList';
 
 
 const Frozen = ()=>{

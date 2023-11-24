@@ -9,11 +9,11 @@ import store from './src/reduxFiles/Store'
 
 export default function Main() {
   return (
-    // <Provider store={store}>
+    <Provider store={store}>
     <PaperProvider>
       <App/>
     </PaperProvider>
-    // </Provider>
+</Provider>
   );
 }
 
