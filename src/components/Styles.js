@@ -29,12 +29,17 @@
       borderRadius: 5,
     },
 
+    bottom:{
+      backgroundColor:'#222222',
+      borderRadius: 25,
+    },
+
     home:{
       height:'100%', 
       flexDirection: 'row', 
       justifyContent:'center', 
       alignItems:'center',  
-      backgroundColor:'#EEE2DE', 
+      backgroundColor:'#210062', 
       gap: 20,
     },
 
@@ -45,8 +50,13 @@
       justifyContent:'center',
       alignItems:'center',
       borderRadius : 50,
-      backgroundColor :'#B31312'
-      
+      backgroundColor :'#F99417'
+    },
+
+    itemList:{
+      margin:15,
+      backgroundColor:'#EA906C'
+
     }
   });
 

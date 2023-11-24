@@ -1,18 +1,46 @@
-import { Avatar, Button, Card, Text } from 'react-native-paper';
+import {useState} from 'react'
+import {View} from 'react-native'
+import { Avatar, Button, Card, Text, TextInput } from 'react-native-paper';
+
+import {useDispatch, useSelector} from 'react-redux'
+import styles from './Styles';
+
+import { add_to_list, remove_from_list } from '../reduxFiles/Action';
+
 
 
 
 const ItemList = (props) => {
   const item = props.item;
+  const [qty, setQty] = useState('');  
+  const dispatch = useDispatch();
+
+const handleAdd = (item)=>{
+  console.log(item);
+  dispatch(add_to_list(item))
+
+}
+  
+  
   return (
-    <Card>
-      <Card.Title title={item.title} />
+    <View
+    style={{backgroundColor:'#2B2A4C'}}
+    >
+    <Card
+    style={styles.itemList}>
+      <Card.Title title={item.name} />
       <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
       <Card.Actions>
-        <Button>Cancel</Button>
-        <Button>Ok</Button>
+        <TextInput
+        placeholder='qty'
+        onChangeText={setQty}></TextInput>
+        <Text>{item.price}</Text>
+        <Button
+        onPress={()=>handleAdd(item)}
+        >Ok</Button>
       </Card.Actions>
     </Card>
+    </View>
   );
 }
 

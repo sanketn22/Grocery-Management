@@ -1,4 +1,4 @@
-import { ADD_TO_LIST,REMOVE_FROM_LIST } from "./Constant";
+import { ADD_TO_LIST, REMOVE_FROM_LIST } from "./Constants"
 
 export function add_to_list(product){
     return {
