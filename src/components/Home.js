@@ -14,7 +14,6 @@ import {
 import { useNavigation } from '@react-navigation/native';
 
 import styles from './Styles';
-// import { Image } from 'react-native-paper/lib/typescript/components/Avatar/Avatar';
 
 
 const Home = (props) => {
