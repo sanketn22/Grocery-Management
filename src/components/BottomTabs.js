@@ -12,7 +12,7 @@ const ListsRoute = () => <Text>Lists</Text>;
 
 const ProfileRoute = () => <Text>Profile</Text>;
 
-const BottomTabs = ()=>{   
+const BottomTabs = (props)=>{   
     
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
