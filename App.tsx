@@ -25,20 +25,26 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-// import { createStackNavigator } from '@react-navigation/stack';
-// import { NavigationContainer } from '@react-navigation/native';
+import 'react-native-gesture-handler';
+
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
 
 import styles from './src/components/Styles';
 import Home from './src/components/Home';
 import Landing from './src/components/Landing';
 import BottomTabs from './src/components/BottomTabs';
+import Fresh from './src/components/Data/Fresh';
+import Frozen from './src/components/Data/Frozen';
+import Medical from './src/components/Data/Medical';
+import Toiletries from './src/components/Data/Toiletries';
 
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-// const Stack = createStackNavigator();
+const Stack = createStackNavigator();
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -46,11 +52,27 @@ function App(): JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+  
 
   return (
+    <>
  
-    // <Landing/>
-    <BottomTabs/>
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName="Landing">
+      {/* <Stack.Screen name = "signup" component={Landing}/> */}
+      {/* <Stack.Screen name="Home" component={({navigation}) => <BottomTabs navigation={navigation}} /> */}
+      <Stack.Screen
+            name="Main"
+            component={BottomTabs}
+          />
+      <Stack.Screen name="Fresh" component={Fresh} />
+      <Stack.Screen name="Frozen" component={Frozen} />
+      <Stack.Screen name="Medical" component={Medical} />
+      <Stack.Screen name="Toiletries" component={Toiletries} />
+    </Stack.Navigator>
+  </NavigationContainer>
+
+  </>
   );
 }
 
