@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react'
 import { Avatar, Button, Card, Text } from 'react-native-paper';
 import { ScrollView } from 'react-native';
 import axios from 'axios'
-import ItemList from '../ItemList';
+import ItemList from '../components/core-components/ItemList';
 
 
 

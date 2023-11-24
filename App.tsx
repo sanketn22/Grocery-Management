@@ -35,10 +35,10 @@ import styles from './src/components/Styles';
 import Home from './src/components/Home';
 import Landing from './src/components/Landing';
 import BottomTabs from './src/components/BottomTabs';
-import Fresh from './src/components/Data/Fresh';
-import Frozen from './src/components/Data/Frozen';
-import Medical from './src/components/Data/Medical';
-import Toiletries from './src/components/Data/Toiletries';
+import Fresh from './src/Data/Fresh';
+import Frozen from './src/Data/Frozen';
+import Medical from './src/Data/Medical';
+import Toiletries from './src/Data/Toiletries';
 
 type SectionProps = PropsWithChildren<{
   title: string;

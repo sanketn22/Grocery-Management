@@ -3,9 +3,9 @@ import { View } from 'react-native'
 import { Avatar, Button, Card, Text, TextInput } from 'react-native-paper';
 
 import { useDispatch, useSelector } from 'react-redux'
-import styles from './Styles';
+import styles from '../Styles';
 
-import { add_to_list, remove_from_list } from '../reduxFiles/Action';
+import { add_to_list, remove_from_list } from '../../reduxFiles/Action';
 
 const ItemList = (props) => {
   const item = props.item;
@@ -15,6 +15,7 @@ const ItemList = (props) => {
 
   const handleAdd = (item) => {
     console.log(item);
+    [... item, ]
     dispatch(add_to_list(item))
   }
   return (
