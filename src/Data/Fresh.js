@@ -10,7 +10,7 @@ import ItemList from '../components/core-components/ItemList';
 
 
 const Fresh = () => {
-  // //fetch fresh items from the db and list it here, use api Endpoint
+  //fetch fresh items from the db and list it here, use api Endpoint
 
   // const [fresh, setFresh] = useState([]); // State to store MongoDB documents as an array
 
@@ -18,7 +18,8 @@ const Fresh = () => {
   //   const fetchData = () => {
    
   //       // Make a GET request to fetch data from MongoDB
-  //       axios.get("http://192.168.1.10:8080/api/getAll").then(data => setFresh(data.data)).catch(err=>console.log(err));
+  //       console.log('in');
+  //       axios.get("http://192.168.137.1:8080/api/getAll").then(data => {console.log(data);setFresh(data.data)}).catch(err=>console.log(err));
      
   //   };
 
@@ -49,13 +50,11 @@ const Fresh = () => {
 
   return (
     <ScrollView>
-
       {
         fresh.map(
           (item) => <ItemList key={item.id} item={item} />
         )
       }
-
     </ScrollView>
   )
 }

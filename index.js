@@ -10,10 +10,10 @@ import store from './src/reduxFiles/Store'
 export default function Main() {
   return (
     <Provider store={store}>
-    <PaperProvider>
-      <App/>
-    </PaperProvider>
-</Provider>
+      <PaperProvider>
+        <App />
+      </PaperProvider>
+    </Provider>
   );
 }
 

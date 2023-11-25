@@ -2,6 +2,7 @@ import * as React from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
 
 import Home from './Home';
+import List from './List';
 import styles from './Styles';
 
 
@@ -9,7 +10,7 @@ const HomeRoute = () => <Home/>;
 
 const MapRoute = () => <Text>Map</Text>;
 
-const ListsRoute = () => <Text>Lists</Text>;
+const ListsRoute = () => <List/>;
 
 const ProfileRoute = () => <Text>Profile</Text>;
 

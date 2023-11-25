@@ -1,6 +1,7 @@
 import { ADD_TO_LIST, REMOVE_FROM_LIST } from "./Constants";
 
 const defaultValue = [];
+const Completed =[];
 
 export const reducer = (state=defaultValue,action)=>{
     switch(action.type){

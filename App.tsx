@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -29,6 +29,7 @@ import 'react-native-gesture-handler';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 import styles from './src/components/Styles';
@@ -39,6 +40,9 @@ import Fresh from './src/Data/Fresh';
 import Frozen from './src/Data/Frozen';
 import Medical from './src/Data/Medical';
 import Toiletries from './src/Data/Toiletries';
+import ActiveList from './src/components/core-components/ActiveList';
+import { useDispatch } from 'react-redux';
+import { add_to_list } from './src/reduxFiles/Action';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -51,12 +55,30 @@ function App(): JSX.Element {
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+
+    
+  };
+  const dispatch = useDispatch();
+
+  const getData = async () => {
+    try {
+      const jsonValue = await AsyncStorage.getItem('my-key');
+      const value = jsonValue != null ? JSON.parse(jsonValue) : [];
+      dispatch(add_to_list(value))
+
+    } catch (e) {
+      // error reading value
+    }
   };
   
 
+  useEffect(()=>{
+  getData()
+  },[])
+  
+
   return (
-    <>
- 
+    <> 
     <NavigationContainer>
     <Stack.Navigator initialRouteName="Landing">
       {/* <Stack.Screen name = "signup" component={Landing}/> */}
@@ -69,6 +91,7 @@ function App(): JSX.Element {
       <Stack.Screen name="Frozen" component={Frozen} />
       <Stack.Screen name="Medical" component={Medical} />
       <Stack.Screen name="Toiletries" component={Toiletries} />
+      <Stack.Screen name="ActiveList" component={ActiveList} />
     </Stack.Navigator>
   </NavigationContainer>
 

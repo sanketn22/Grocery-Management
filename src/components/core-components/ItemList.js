@@ -15,7 +15,7 @@ const ItemList = (props) => {
 
   const handleAdd = (item) => {
     console.log(item);
-    [... item, ]
+    // [... item, ]
     dispatch(add_to_list(item))
   }
   return (

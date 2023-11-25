@@ -57,6 +57,13 @@
       margin:15,
       backgroundColor:'#EA906C'
 
+    },
+
+    saveList:{
+      justifyContent:'center',
+      alignItems:'center',
+      backgroundColor:'red'
+
     }
   });
 
